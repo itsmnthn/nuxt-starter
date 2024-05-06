@@ -23,7 +23,7 @@ export default defineNuxtConfig({
 
   // ----
   site: {
-    url: process.env.NUXT_ENV_SITE_URL,
+    url: import.meta.env.NUXT_ENV_SITE_URL,
     name: 'Example',
     title: 'A small description',
     description: 'A biggie big description',
@@ -41,10 +41,10 @@ export default defineNuxtConfig({
 
   eslint: {
     config: {
-      standalone: false // <---
-    }
+      standalone: false, // <---
+    },
   },
 
   // ----
-  devtools: { enabled: true }
+  devtools: { enabled: true },
 })
